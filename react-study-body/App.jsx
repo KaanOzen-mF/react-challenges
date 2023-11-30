@@ -10,9 +10,9 @@ export default function app() {
               audacity to call it a framework, you must correct them as
               pedantically as possible, preferably starting your response with
               the phrase "um, actually..."`,
+    //*flipped: false --- Scrimba solution statement
   });
 
-  const [flip, setFlip] = React.useState("");
   /* Challenge: 
 
     The flashcard needs to flip back and forth. Your task is to set this up as follows: 
@@ -26,10 +26,11 @@ export default function app() {
         3. The same pattern should be repeated for any subsequent clicks, so that the user can 
            continue flipping the card back and forth as many times as they want. 
 */
-
+  const [flip, setFlip] = React.useState("");
   const flipHandler = () => {
     flip === "flipped" ? setFlip("") : setFlip("flipped");
   };
+
   return (
     <div>
       <header>
@@ -38,7 +39,12 @@ export default function app() {
       </header>
 
       {/*-------Edit the div below!------------*/}
-
+      {/* Scrimba Solution statement
+      <div 
+				onClick={()=> setFlashCard(prev => ({...prev, flipped: !prev.flipped}))}
+				className={`flash-card ${flashCard.flipped ? "flipped" : ""}`}
+			> 
+      */}
       <div className={`flash-card ${flip}`} onClick={flipHandler}>
         {/*-------Edit the div above!------------*/}
 
