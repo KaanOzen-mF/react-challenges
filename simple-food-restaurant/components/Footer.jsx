@@ -7,7 +7,7 @@ export default function Footer() {
         <p>
           Made by
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            Cheeky Coding Company
+            Kaan Ozen
           </a>
           ™.
         </p>
