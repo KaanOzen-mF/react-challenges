@@ -193,3 +193,24 @@ img {
   border-radius: 15px;
   box-shadow: 0 5px 10px black;
 }
+
+/* Styling the scrollbar track (the part the thumb moves within) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the tracking area */
+}
+
+/* Styling the scrollbar thumb (the draggable element) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the thumb */
+}
+
+/* Styling the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color when hovering over the thumb */
+}
+
+/* Styling the scrollbar itself (width, height) */
+::-webkit-scrollbar {
+  width: 10px; /* width of the vertical scrollbar */
+  height: 10px; /* height of the horizontal scrollbar */
+}
