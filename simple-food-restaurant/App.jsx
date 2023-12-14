@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Menu from "./components/Menu"; // Assuming you have this component
+import HoursLocation from "./components/HoursLocation"; // Assuming you have this component
 import Footer from "./components/Footer";
 
 export default function App() {
+  const [activeComponent, setActiveComponent] = useState("Main");
+
+  const handleButtonClick = (componentName) => {
+    setActiveComponent(componentName);
+  };
+
+  console.log(activeComponent);
   return (
     <>
-      <Header />
-      <Main />
+      <Header onButtonClick={handleButtonClick} />
+      {activeComponent === "Main" && <Main />}
+      {activeComponent === "Menu" && <Menu />}
+      {activeComponent === "HoursLocation" && <HoursLocation />}
       <Footer />
     </>
   );
