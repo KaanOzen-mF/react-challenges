@@ -15,49 +15,59 @@ export default function Menu() {
           full of comforting and familiar dishes.
         </p>
 
-        <div className="image-container">
-          <div className="image-wrapper">
+        <div className="menu-container">
+          <div className="menu-wrapper">
             <img src="images/pizza.png" alt="" />
-            <p>Dish: Classic Margherita Pizza</p>
+            <p>Classic Margherita Pizza</p>
             <p>
-              Ingredients: Fresh tomato sauce, mozzarella cheese, basil leaves,
-              olive oil, salt.
+              <i>
+                Fresh tomato sauce, mozzarella cheese, basil leaves, olive oil,
+                salt.
+              </i>
             </p>
             <p>Price: $12.00</p>
           </div>
-          <div className="image-wrapper">
+          <div className="menu-wrapper">
             <img src="images/salad.png" alt="" />
-            <p>Dish: Caesar Salad</p>
+            <p>Caesar Salad</p>
             <p>
-              Ingredients: Romaine lettuce, Caesar dressing, croutons, parmesan
-              cheese, lemon wedge.
+              <i>
+                Romaine lettuce, Caesar dressing, croutons, parmesan cheese,
+                lemon wedge.
+              </i>
             </p>
             <p>Price: $8.50</p>
           </div>
-          <div className="image-wrapper">
+          <div className="menu-wrapper">
             <img src="images/carbonara.png" alt="" />
-            <p>Dish: Spaghetti Carbonara</p>
+            <p>Spaghetti Carbonara</p>
             <p>
-              Ingredients: Spaghetti, pancetta, eggs, parmesan cheese, black
-              pepper, garlic.
+              <i>
+                Spaghetti, pancetta, eggs, parmesan cheese, black pepper,
+                garlic.
+              </i>
             </p>
             <p>Price: $14.00</p>
           </div>
-          <div className="image-wrapper">
+          <div className="menu-wrapper">
             <img src="images/chickenSandwich.png" alt="" />
-            <p>Dish: Grilled Chicken Sandwich</p>
+            <p>Grilled Chicken Sandwich</p>
             <p>
-              Ingredients: Grilled chicken breast, lettuce, tomato, mayonnaise,
-              whole grain bun.
+              <i>
+                Grilled chicken breast, lettuce, tomato, mayonnaise, whole grain
+                bun.
+              </i>
             </p>
             <p>Price: $10.00</p>
           </div>
-          <div className="image-wrapper">
+          <div className="menu-wrapper">
             <img src="images/burger.png" alt="" />
-            <p>Dish: Beef Burger</p>
+            <p>Beef Burger</p>
             <p>
-              Ingredients: Ground beef patty, cheddar cheese, lettuce, tomato,
-              onion, pickles, ketchup, mustard, sesame bun.
+              <i>
+                Ground beef patty, cheddar cheese, lettuce, tomato, onion,
+                pickles, ketchup, mustard, sesame bun.
+              </i>
             </p>
             <p>Price: $11.00</p>
           </div>
