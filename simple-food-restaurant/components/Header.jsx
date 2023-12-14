@@ -1,13 +1,15 @@
 import React from "react";
 
-export default function Header() {
+export default function Header({ onButtonClick }) {
   return (
     <>
       <header>
         <div className="button-container">
-          <button>Our Menu</button>
-          <button>Abort</button>
-          <button>Hours & Location</button>
+          <button onClick={() => onButtonClick("Menu")}>Our Menu</button>
+          <button onClick={() => onButtonClick("Main")}>Abort</button>
+          <button onClick={() => onButtonClick("HoursLocation")}>
+            Hours & Location
+          </button>
         </div>
       </header>
     </>
