@@ -1,17 +1,16 @@
-import React from "react"
-import Enemy from "./components/Enemy"
-import Button from "./components/Button"
-import runGame from "./utilities/runGame"
-import initialEnemyData from "./data/initialEnemyData"
+import React from "react";
+import Enemy from "./components/Enemy";
+import Button from "./components/Button";
+import runGame from "./utilities/runGame";
+import initialEnemyData from "./data/initialEnemyData";
 
 export default function App() {
-	
-	const [gameRunning, setGameRunning] = React.useState(false)
-	const [enemiesData, setEnemiesData] = React.useState(initialEnemyData)
-   
-    runGame(gameRunning, setEnemiesData)
-					
-/* Challenge
+  const [gameRunning, setGameRunning] = React.useState(false);
+  const [enemiesData, setEnemiesData] = React.useState(initialEnemyData);
+
+  runGame(gameRunning, setEnemiesData);
+
+  /* Challenge
 		
 	The castle for this action RPG needs enemies! Your task is to create them as follows: 
 	
@@ -37,21 +36,26 @@ export default function App() {
 		   enemiesData objects, resulting in 3 different enemies in three different positions in the castle. When you click the "Play" button, they should start walking back and forth!
 		   
 */
-	
-	return (
-		<div className="wrapper">
-			<div className="meadow-container">
-				<div className="castle-container">
-					
-				{/*------Your Enemy elements below!------*/}
 
-					
-				{/*------Your Enemy elements above!------*/}
-				
-				</div>
-			</div>
+  return (
+    <div className="wrapper">
+      <div className="meadow-container">
+        <div className="castle-container">
+          {/*------Your Enemy elements below!------*/}
 
-			<Button stateProps={{ gameRunning, setGameRunning }} />
-		</div>
-	)
+          {enemiesData.map((enemy, key) => (
+            <Enemy
+              key={key}
+              currentImage={enemy.currentImage}
+              position={enemy.position}
+              orientation={enemy.orientation}
+            />
+          ))}
+          {/*------Your Enemy elements above!------*/}
+        </div>
+      </div>
+
+      <Button stateProps={{ gameRunning, setGameRunning }} />
+    </div>
+  );
 }
