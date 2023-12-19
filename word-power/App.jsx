@@ -1,16 +1,16 @@
-import React from "react"
-import wordsDataOne from "./data/wordsDataOne"
-import wordsDataTwo from "./data/wordsDataTwo"
-import Header from "./components/Header"
-import Word from "./components/Word"
-import NavButtons from "./components/NavButtons"
-import Footer from "./components/Footer"
+import React from "react";
+import wordsDataOne from "./data/wordsDataOne";
+import wordsDataTwo from "./data/wordsDataTwo";
+import Header from "./components/Header";
+import Word from "./components/Word";
+import NavButtons from "./components/NavButtons";
+import Footer from "./components/Footer";
 
 export default function App() {
-	const [wordsDataArray, setWordsDataArray] = React.useState(wordsDataOne)
-	const [currentWord, setCurrentWord] = React.useState(wordsDataArray[0])
-    
-/* Challenge 
+  const [wordsDataArray, setWordsDataArray] = React.useState(wordsDataOne);
+  const [currentWord, setCurrentWord] = React.useState(wordsDataArray[0]);
+
+  /* Challenge 
 
     There are too many props in the two <NavButtons /> and one <Word /> elements below. Your task is to make this aspect of the code more concise and efficient as follows: 
         
@@ -26,40 +26,18 @@ export default function App() {
 	Note: The results won't necessarily be the "best" way of passing the props, and some aspects of how this challenge is set up are a bit contrived. This is just meant as an exercise in reducing the number of props you pass! 
 */
 
-	return (
-		<div className="wrapper">
-			<Header />
-			
-			<NavButtons 
-				wordsDataArray={wordsDataArray}
-				currentWord={currentWord}
-				setCurrentWord={setCurrentWord}
-				position="top"
-			 />
-			 
-			<Word
-				word={currentWord.word}
-				pronunciation={currentWord.pronunciation}
-				definition={currentWord.definition}
-				icon={currentWord.icon}
-				category={currentWord.category}
-				note={currentWord.note}
-				partOfSpeech={currentWord.partOfSpeech}
-				example={currentWord.example}
-				synonyms={currentWord.synonyms}
-				antonyms={currentWord.antonyms}
-				etymology={currentWord.etymology}
-				array={wordsDataArray}
-			/>
-			
-			<NavButtons 
-				wordsDataArray={wordsDataArray}
-				currentWord={currentWord}
-				setCurrentWord={setCurrentWord}
-				position="bottom"
-			 />
-			 
-			<Footer />
-		</div>
-	)
+  const data = { wordsDataArray, currentWord, setCurrentWord };
+  return (
+    <div className="wrapper">
+      <Header />
+
+      <NavButtons data={{ ...data, position: "top" }} />
+
+      <Word data={{ ...currentWord, array: wordsDataArray }} />
+
+      <NavButtons data={{ ...data, position: "top" }} />
+
+      <Footer />
+    </div>
+  );
 }
